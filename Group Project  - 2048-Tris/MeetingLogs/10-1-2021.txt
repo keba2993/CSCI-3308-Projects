@@ -1,0 +1,7 @@
+We did milestone 2, so we added a bunch of user stories
+
+Jira has kanban boards
+
+You can add dependencies to user stories
+
+We should add our sprint plans to Jira

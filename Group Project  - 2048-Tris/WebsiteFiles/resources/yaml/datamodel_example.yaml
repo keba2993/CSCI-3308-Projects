@@ -1,0 +1,15 @@
+leaderboard:
+  #user id
+  3d8ycC1absWI7xOANHrxL59vW4y1: 
+    name: abc
+    attempt:
+      #each attempt is saved in a unique thing
+      #'a' + new Date().getTime()
+      a1635275756212:
+        combinedScore: 123
+        score2048: 23
+        scoreTetris: 100
+      a1635276026594:
+        combinedScore: 555
+        score2048: 250
+        scoreTetris: 255

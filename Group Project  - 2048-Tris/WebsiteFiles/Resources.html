@@ -1,0 +1,296 @@
+<!-- Home Page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Resources</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="./resources/css/web_style.css" rel="stylesheet" />
+    <script src="./resources/js/home.js" type="module"> </script>
+    <script src="./resources/js/login.js" type="module"></script>
+    <script type="text/javascript" src="./resources/js/signup.js"></script>
+    <script src="./resources/js/tetris2048.js" type="module"></script>
+    <link rel="icon" href="./resources/img/favicon.png" type="image/x-icon">
+    <script src="./resources/js/navbar.js" type="module"></script>
+</head>
+
+<body>
+    <!-- navbar HTML -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-style">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./leaderboard.html">Leaderboard</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./tutorial.html">Tutorial</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown invisible" id="loggedIn">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-right: 30px;">
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="" id="logout">Log Out</a>
+                <a class="dropdown-item" href="./settings.html">Settings</a>
+              </div>
+            </li>
+              <li class="nav-item" id="signModal">
+                  <a class="nav-link" href="#myModal" data-toggle="modal" onclick="openModal()">Signup</a>
+              </li>
+              <li class="nav-item" id="loginModal">
+                <a class="nav-link" href="#myModal2" data-toggle="modal" onclick="openModalLogin()">Login</a>
+              </li>
+              
+          </ul>
+      </div>
+  </nav>
+    <!-- contents HTML -->
+    <div class="container">
+        <!-- Jumbotron HTML -->
+        <div class="jumbotron jumbotron-fluid heading-style">
+            <div class="container">
+              <h1 class="display-4 text-center">Resources</h1>
+              <hr class="my-4 pb-2">
+              <p class="lead">
+                Documentation of the various resources we utilized and languages that went into this project!
+              </p>
+            </div>
+        </div>
+        <div class="row" style="padding: 10px;">
+          <div class="col-sm" style="padding-right: 270px;">
+            <div class="card card-style">
+              <div class="card-body">
+                <img src="./resources/img/html.png" alt="html_image" width="300px" height="250px"/>
+                <h2 class="card-title">HTML 5</h2>
+                <a class="nav-link" href="https://www.w3schools.com/html/" alt="html">HTML - Documentation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card card-style">
+              <div class="card-body">
+                <img src="./resources/img/css-3-logo.png" alt="css_image" width="300px" height="250px"/>
+                <h2 class="card-title">CSS</h2>
+                <a class="nav-link" href="https://www.w3schools.com/css/default.asp" alt="css">CSS - Documentation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding: 10px;">
+          <div class="col-sm">
+            <div class="card card-style mx-auto">
+              <div class="card-body">
+                <img src="./resources/img/bootstrap.png" alt="boot_image" width="300px" height="250px"/>
+                <h2 class="card-title">Bootstrap 4</h2>
+                <a class="nav-link" href="https://www.w3schools.com/bootstrap4/default.asp" alt="bootS">Bootstrap - Documentation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding: 10px;">
+          <div class="col-sm" style="padding-right: 270px;">
+            <div class="card card-style">
+              <div class="card-body">
+                <img src="./resources/img/js-logo.png" alt="js_image" width="300px" height="250px"/>
+                <h2 class="card-title">JavaScript</h2>
+                <a class="nav-link" href="https://www.w3schools.com/js/default.asp" alt="js">JS - Documentation</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card card-style">
+              <div class="card-body">
+                <img src="./resources/img/firebase-1-logo.png" alt="fb_image" width="300px" height="250px"/>
+                <h2 class="card-title">Firebase</h2>
+                <a class="nav-link" href="https://firebase.google.com/docs" alt="fb">Firebase - Documentation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal HTML -->
+    <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-login">
+              <div class="modal-content" style="background-color: #ff7575;">
+                <div class="modal-header">
+                  <div class="avatar">
+                    <img
+                      src="https://www.tutorialrepublic.com/examples/images/avatar.png"
+                      alt="Avatar"
+                    />
+                  </div>
+                  <h4 class="modal-title"><b>Sign Up page</b></h4>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                                    <input
+                                      id="username"
+                                      type="text"
+                                      class="form-control"
+                                      name="username"
+                                      placeholder="Username"
+                                      required="required"
+                                    />
+                                  </div>
+                                  <div class="form-group">
+                                    <input
+                                      id="email"
+                                      type="text"
+                                      class="form-control"
+                                      name="email"
+                                      placeholder="Email"
+                                      required="required"
+                                    />
+                                  </div>
+                  <div class="form-group">
+                    <input
+                      id="psw"
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="Password"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="cpsw"
+                      type="password"
+                      class="form-control"
+                      name="confirm password"
+                      placeholder="Confirm Password"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <button
+                      id="my_submit_button"
+                      class="btn btn-primary btn-block login-btn"
+                      style="background-color: #383c44;"
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div id="message" style="display: block">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter
+                    </p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+                    <p id="match" class="invalid">Password and Confirm Password Match
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    <!-- Login Modal HTML -->
+    <div id="myModal2" class="modal fade">
+          <div class="modal-dialog modal-login">
+            <div class="modal-content" style="background-color: #ff7575;">
+              <div class="modal-header">
+                <div class="avatar">
+                  <img
+                    src="https://www.tutorialrepublic.com/examples/images/avatar.png"
+                    alt="Avatar"
+                  />
+                </div>
+                <h4 class="modal-title"><b>Login page</b></h4>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-hidden="true"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <input
+                    id="email2"
+                    type="text"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    id="psw2"
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+                    required="required"
+                  />
+                </div>
+                <div class="form-group">
+                  <button
+                    id="my_submit_button2"
+                    class="btn btn-primary btn-block login-btn"
+                    style="background-color: #383c44;"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    <footer class="footer-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a class="nav-link" href="./Developers.html">Developers</a>
+          </div>
+          <div class="col-sm">
+            <a class="nav-link" href="./About.html">About</a>
+          </div>
+          <div class="col-sm">
+            <a class="nav-link" href="./Resources.html">Resources</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+</html>

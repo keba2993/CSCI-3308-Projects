@@ -1,0 +1,5 @@
+We finished most of milestone 1
+
+recommended considering Progressive Web apps perhaps using angular
+
+We need to actually finish milestone 1

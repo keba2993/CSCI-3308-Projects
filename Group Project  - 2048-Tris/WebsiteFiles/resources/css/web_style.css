@@ -1,0 +1,233 @@
+/* style sheet to be used to create uniformity across website pages */
+
+html, body{
+  height:100%; /* important to vertically align the container */
+  margin:0;
+  padding:0;
+}
+
+/* General body styles */
+body {
+padding-top: 0px;
+padding-bottom: 0px;
+background-color: rgb(180, 245, 224);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* heading styles for pages */
+.heading-style
+{
+background-color: #ff7575;
+color: azure;
+padding: 40px;
+text-align: center;
+} 
+
+/* Footer styles for pages */
+.footer-style
+{
+background-color: #383c44;
+color: azure;
+text-align: center;
+margin-bottom: 1;
+padding: 15px;
+} 
+
+/* nav-bar changes for pages */
+.navbar-style
+{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+
+/* change color of links */
+.nav-link
+{
+color: azure; 
+}
+
+.para-style
+{
+color: #383c44;
+font-size: medium;
+text-align: center;
+}
+
+/* mouse over link */
+a:hover {
+color: rgb(181, 189, 189);
+}
+
+/* table styles for pages - leaderboard */
+.table-style
+{
+text-align: center;
+padding: 20px;
+font-size: smaller;
+} 
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #ff7575;
+}
+
+/* card style for carousel and other cards */
+.card-style
+{
+text-align: center;
+font-size: large;
+color:#383c44;
+background-color: #ff7575;
+width: 400px;
+}
+
+.card-title
+{
+  padding-top: 10px;
+}
+
+/* modal style */
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+.modal-login {
+    color: #636363;
+    width: 350px;
+}
+.modal-login .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.modal-login .modal-header {
+    border-bottom: none;
+    position: relative;
+    justify-content: center;
+}
+.modal-login h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -15px;
+}
+.modal-login .form-control:focus {
+    border-color: #70c5c0;
+}
+.modal-login .form-control, .modal-login .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+.modal-login .close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+.modal-login .modal-footer {
+    background: #383c44;
+    border-color: #383c44;
+    text-align: center;
+    justify-content: center;
+    margin: 0 -20px -20px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.modal-login .modal-footer a {
+    color: #999;
+}
+.modal-login .avatar {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #60c7c1;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-login .avatar img {
+    width: 100%;
+}
+.modal-login.modal-dialog {
+    margin-top: 80px;
+}
+.modal-login .btn {
+    color: azure;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border: none;
+}
+.modal-login .btn:hover, .modal-login .btn:focus {
+    background: #45aba6;
+    outline: none;
+}
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #383c44;
+  color: azure;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: rgb(180, 245, 224);
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: '\2713';
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #ff7575;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: '\00D7';
+}
+
+
+#game_canvas {
+  position: relative;
+  align-self: center;
+}
+#settings {
+  background-color: #EFF0F0;
+  }

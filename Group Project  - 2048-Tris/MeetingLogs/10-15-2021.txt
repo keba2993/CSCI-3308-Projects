@@ -1,0 +1,3 @@
+Did the meeting for milestone 3. 
+
+We strutted our HTML, Firebase, and CSS stuff.

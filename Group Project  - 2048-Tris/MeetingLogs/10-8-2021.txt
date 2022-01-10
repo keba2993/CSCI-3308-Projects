@@ -1,0 +1,5 @@
+We assigned stuff in Jira
+
+Reviewed reqs for next weeks meeting - milestone 3
+Typically: share screen and show data modeling and database
+Using yaml to map it out would be nice. Make it reflect what exists in firebase
