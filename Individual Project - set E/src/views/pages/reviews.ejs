@@ -1,0 +1,68 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+   
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  <div class="container">
+		<div class="row">
+			<div class="col">
+        <div class="jumbotron" style="background-color: #383c44;">
+          <h4 class="display-4" style="color: white;">Movie Reviews</h4>
+          <form action="/reviews/filter" method="post">
+            <div class="form-group row">
+              <div class="form-group col-sm-5">
+                <input type="text" class="form-control" placeholder="Enter meal name" name="meal_filter" id="meal_filter">
+              </div>
+              <div class="form-group col-sm-1">
+                <button type="submit" class="btn btn-primary mr-sm-2">Filter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <table class="table table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Review</th>
+            <th>Review Date</th>
+          </tr>
+        </thead>
+        <tbody id="review_table">
+          <% if (reviews) {reviews.forEach(function(review){ %>
+            <tr>
+              <td><p> <%= review.meal_name %> </p></td>
+              <td><p> <%= review.review %> </p></td>
+              <td><p> <%= review.review_date %> </p></td>
+            </tr>
+          <%});}%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+
+	<!-- Because we now use partials for our header, we can't directly add Boostrap Classes to our Body tag.
+		 Below is a "work-around" to apply the Bootstrap classes when the page loads
+	 -->
+	<script type="text/javascript">
+        function addCSSToBody() {
+            document.body.classlist.add("center");
+            document.body.classlist.add("text-center");
+        }
+        window.onload = addCSSToBody;
+	</script>
+<%- include('../partials/footer') %>

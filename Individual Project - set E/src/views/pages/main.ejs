@@ -1,0 +1,100 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="jumbotron" style="background-color: #383c44;">
+					<form action="/main/search" method="post">
+            <div class="form-group row">
+							<div class="form-group col-sm-5">
+								<input type="text" class="form-control" name="meal_name" id="meal_name"  placeholder="Enter Meal Name">
+							</div>
+              <div class="form-group col-sm-2">
+								<button type="submit" class="btn btn-light btn-block">Search</button>
+							</div>
+						</div>
+          </form>
+				</div>
+			</div>
+		</div>
+    <div class = "row" style="padding-bottom: 10px;">
+      <% if (items) { %>
+        <% var card =`<div class="col">
+                        <img src="${items.strMealThumb}" alt="meal_image" >
+                      </div>
+                      <div class="col">
+                        <h4 class="card-title">${items.strMeal}</h4>
+                        <p><b>Instrcutions:</b></p>
+                        <p>${items.strInstructions}</p>
+                        <p><b>Tags:</b></p>
+                        <p>${items.strTags}</p>
+                        <a href="${items.strYoutube}" class="btn btn-primary">Video on Youtube</a>
+                        <a href="${items.strSource}" class="btn btn-primary">View Source Website</a>
+                        <br>
+                        <br>
+                        <a href="#myModal" class="btn btn-primary" data-toggle="modal">Add Review</a>
+                      </div>`; %>
+      
+        <%- card %>
+      
+      <% } %>
+      </div>
+	</div>
+
+  <% if (error) { %>
+    <div class="alert alert-danger"><%- message %></div>
+  <% } %>
+
+  <!-- Modal HTML -->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add Review</h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+        </div>
+        <form action="/reviews" method="post">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="meal_name">Meal Name</label>
+            <textarea
+              type="text"
+              class="form-control col-lg-5"
+              name="meal_name"
+              id="meal_name"
+              readonly
+            ><%= items.strMeal%></textarea>
+          </div>
+          <div class="form-group">
+            <label for="review">Write Review Here</label>
+            <textarea
+              id="review_text"
+              type="text"
+              class="form-control input-lg"
+              name="review_text"
+              required="required"
+            ></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+            <button
+              id="my_submit_button"
+              class="btn btn-primary btn-block"
+            >Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+<%- include('../partials/footer') %>
